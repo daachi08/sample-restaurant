@@ -1,41 +1,4 @@
 @charset "UTF-8";
-/* ルートのフォントサイズを16pxに設定*/
-@media (max-width: 1180px) {
-  .aa {
-    color: red;
-  }
-}
-
-@media (max-width: 1179px) {
-  .aa {
-    color: blue;
-  }
-}
-
-@media (max-width: 767px) {
-  .aa {
-    color: yellow;
-  }
-}
-
-/* ルートのフォントサイズを16pxに設定*/
-@media (max-width: 1180px) {
-  .aa {
-    color: red;
-  }
-}
-
-@media (max-width: 1179px) {
-  .aa {
-    color: blue;
-  }
-}
-
-@media (max-width: 767px) {
-  .aa {
-    color: yellow;
-  }
-}
 
 /*
     リセットCSS等の基本設定
@@ -49,7 +12,7 @@
 
 html {
   font-size: 62.5%;
-  /* ルートのフォントサイズ*/
+  /* ルートのフォントサイズを16pxに設定*/
 }
 
 html,
