@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/* ルートのフォントサイズを16pxに設定*/
+@media (max-width: 1180px) {
+  .aa {
+    color: red;
+  }
+}
+
+@media (max-width: 1179px) {
+  .aa {
+    color: blue;
+  }
+}
+
+@media (max-width: 767px) {
+  .aa {
+    color: yellow;
+  }
+}
+
+/*
+    footer
+*/
+.footer {
+  background-color: #e7b75e;
+}
+
+.footer-wrapper {
+  padding: 20px 12.3% 15px;
+  color: #c4c4c4;
+  background-color: #e7b75e;
+}
+
+@media (max-width: 767px) {
+  .footer-wrapper {
+    padding: 24px;
+  }
+}
+
+.footer-contents {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-contents_left {
+  width: 300px;
+  margin: auto;
+}
+
+@media (max-width: 1179px) {
+  .footer-contents_left {
+    width: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-contents_left {
+    display: none;
+  }
+}
+
+.footer-contents_left img {
+  width: 65%;
+  margin-top: 30px;
+}
+
+.footer-contents_right {
+  width: 65%;
+  border-left: 1px solid #D0D0D0;
+}
+
+@media (max-width: 767px) {
+  .footer-contents_right {
+    width: 100%;
+    border: 1px solid #D0D0D0;
+  }
+}
+
+.footer-nav {
+  padding-left: 15%;
+}
+
+@media (max-width: 767px) {
+  .footer-nav {
+    text-align: center;
+    padding-left: 0%;
+  }
+}
+
+.footer-nav ul {
+  margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  .footer-nav ul {
+    margin-top: 20px;
+  }
+}
+
+.footer-nav li {
+  width: 50%;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .footer-nav li {
+    width: 100%;
+  }
+}
+
+#menu-item-133 a, #menu-item-134 a, #menu-item-135 a, #menu-item-136 a, #menu-item-137 a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #ab3424;
+}
+
+#menu-item-133 a::after, #menu-item-134 a::after, #menu-item-135 a::after, #menu-item-136 a::after, #menu-item-137 a::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ab3424;
+  transition: all .3s ease 0s;
+}
+
+#menu-item-133 a:hover::after, #menu-item-134 a:hover::after,
+#menu-item-135 a:hover::after, #menu-item-136 a:hover::after,
+#menu-item-137 a:hover::after {
+  width: 100%;
+}
+
+.copy-right {
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .copy-right {
+    font-size: 1.1rem;
+  }
+}
+
+/*
+    footer end
+*/

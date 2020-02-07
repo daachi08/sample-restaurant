@@ -1,0 +1,34 @@
+// ミックスインの定義
+@mixin border {
+	width: 250px;
+    border: 2.5px solid rgb(171,52,36);;
+    display: block;
+    margin: 0 auto;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+@mixin btn-form {
+	background-color: #6A3906;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 40px;
+    display: table;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 1.4rem;
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+
+ // float 解除
+ @mixin clear {
+
+ 	&::after {
+ 		content: "";
+ 		display: block;
+ 		clear: both;
+ 	}
+ }

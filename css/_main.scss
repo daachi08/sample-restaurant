@@ -1,0 +1,717 @@
+@import "_color.scss";
+@import "_typography.scss";
+@import "_mixin.scss";
+@import "_responsive.scss";
+@import "_base.scss";
+
+.main-image {  
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+
+}
+
+.about-wrapper {
+    padding: 40px 0;
+    margin-top: -8px;
+    background-color: rgb(236,234,228);
+    
+}
+
+.about-heading {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.8rem;  
+    color:  $TitleColor;
+}
+
+.sub-title {
+    font-size: 2.0rem;
+    margin-top: 30px;
+    @include sp {
+        font-size: 1.6rem;
+    }
+}
+
+.border-line {
+    @include border;
+}
+
+.about-text {
+    display: flex;
+    margin-top: 30px;
+    @include sp {
+        flex-direction: column;
+    }
+
+    img {
+        width: 43%;
+        height: auto;
+        @include sp {
+            margin: auto;
+            width: 100%;
+
+        }
+    }
+
+    p {
+        text-align: justify;
+        @include sp {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
+
+
+.button {
+    @include btn-form;
+    margin-top: 50px;
+}
+
+//menu//
+.menu-wrapper {
+    padding: 40px 0;
+    text-align: center;
+    background-color: $Background;
+
+}
+
+.menu-image {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    li {
+        width: 25%;
+        margin-bottom: -8px;
+        @include sp {
+            width: 100%;
+        }
+        
+    }
+    img {
+    width: 100%;
+    object-fit: cover;
+
+
+    }
+}
+
+//menu end//
+
+
+//news//
+.news-wrapper {
+    padding: 40px 0;
+    text-align: center;
+    background-color: rgb(236,234,228);
+}
+
+.news-content {
+    margin: 50px auto 0;
+    display: flex;
+    @include sp {
+        flex-direction: column;
+    }
+}
+
+.news-item {
+    padding: 10px 3.125%;
+    width: 33.33333%;
+    border-right: 1px solid #D0D0D0;
+    @include sp {
+        padding: 20px 3.125%;
+        width: 100%;
+        border-bottom: 1px solid #D0D0D0;
+        border-right: none;
+    }
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.news-link {
+    display: inline-block;
+    transition: all .3s ease 0s;
+    text-decoration: none;
+    color: $MainColor;
+  
+  &:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.54);
+  }
+}
+
+.news-title {
+    margin-top: 30px;
+    font-size: 2.0rem;
+    font-weight: bold;
+
+}
+
+.news-text {
+    margin-top: 30px;
+    text-align: justify;
+
+}
+
+//news end //
+
+//access 
+.access-wrapper {
+    text-align: center;
+    margin-bottom: -8px;
+    max-width: 100%;
+    position: relative;
+}
+
+.google-map {
+    @include sp {
+        height: 50vh;
+    }
+}
+
+.access-boxs {
+    background-color: rgba(0,0,0,0.4);;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+}
+
+.access-heading_pc {
+    padding: 15px;
+    @include sp {
+        display: none;
+    }
+
+}
+
+.access-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.border-line_access {
+    @include border;  
+    width: 100px; 
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.access-text {
+    color: #ffffff;
+}
+
+.access-icon  {
+    text-align: right;
+    color: #ffffff;
+    font-size: 2.0rem;
+}
+
+.access-wrapepr_sp {
+   background-color: #d0d0d0;
+   margin-top: -8px;
+}
+
+.access-heading_sp {
+    display: none;
+    padding: 30px 0;
+    @include sp {
+        display: block;
+    }
+}
+
+// access end //
+
+/* page-menu.html */
+.page-top_wrapper {
+    position: relative;
+    img {
+            height: 360px;
+            text-align: center;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+            width: 100%;
+            object-fit: cover;
+            @include sp {
+                height: 260px;
+            }
+    }
+}
+
+.top-image {
+    height: 360px;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    width: 100%;
+    object-fit: cover;
+    @include sp {
+        height: 260px;
+    }
+}
+
+.page-main {
+    background-color: rgb(236,234,228);
+    margin-top: -8px;
+    padding: 50px 0;
+}
+
+.course-items {
+    display: flex;
+    flex-wrap: wrap;
+    @include sp {
+        flex-direction: column;
+    }
+}
+
+.course-item{
+    margin: 0 auto 170px;
+    width: 48%;
+    position: relative;
+    @include sp {
+        margin: 0 auto 50px;
+        width: 100%;
+    }
+    a {
+        color: $MainColor;
+    }
+}
+
+.course-image {
+    img {
+    width: 100%;
+    object-fit: cover;
+    }
+}
+
+.menu-body {
+    position: absolute;
+    right: 4.55%;
+    bottom: -130px;
+    padding: 13.5px 22px;
+    width: 80%;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.07);
+    @include sp {
+        position: static;
+        width: 100%;
+        margin-top: -8px;
+    }
+}
+
+.page-title {
+    font-size: 3.8rem;
+    line-height: 1;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-align: center;
+}
+
+.menu-name {
+    text-decoration: none;
+    margin: 20px 0;
+    font-size: 2.0rem;
+    color: $TitleColor;
+    font-weight: bold;
+}
+
+.menu-button {
+    @include btn-form ;
+    margin-top: 20px;
+}
+
+.course-subtitle {
+    font-size: 2.0rem;
+}
+/* page-menu.html end */
+
+/* archive.html */
+.news-body {
+    padding: 16px 0;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #d0d0d0;
+    @include sp {
+        display: block;
+    }
+}
+
+.archive-link {
+    display: inline-block;
+    transition: all .3s ease 0s;
+    text-decoration: none;
+    color: $MainColor;
+    width: 100%;
+    &:hover {
+        cursor: pointer;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.54);
+      }
+}
+
+.release {
+    width: 15%;
+    font-size: 1.4rem;
+    @include sp {
+        width: 100%;
+    }
+}
+
+.archive-title {
+    width: 85%;
+    font-size: 1.4rem;
+    @include sp {
+        width: 100%;
+    }
+}
+/* archive.html end*/
+
+/* single.html*/
+.single-inner {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 960px;
+    @include sp {
+        padding: 0 10px;
+    }
+}
+
+.single-title {
+    font-size: 2.8rem;
+    color: $TitleColor;
+    border-bottom: solid 1px #d0d0d0;
+    @include sp {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+}
+
+
+.single-body {
+    margin-top: 2.5%;
+    padding-bottom: 4%;
+    border-bottom: 1px solid rgb(208, 208, 208);
+}
+
+.single-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5%;
+}
+
+.prev-link {
+    text-decoration: none;
+    color: $MainColor;
+    &:hover {
+        cursor: pointer;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.54);
+      }
+    span {
+        padding-left: 5px;
+    }
+
+}
+
+.next-link {
+    text-decoration: none;
+    color: $MainColor;
+    &:hover {
+        cursor: pointer;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.54);
+      }
+}
+/* single.html end*/
+
+/* page-access.html*/
+
+.articles {
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: space-between;
+    @include sp {
+        flex-direction: column;
+    }
+}
+
+.article-card {
+    width: 31.25%;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.34);
+    @include sp {
+        width: 90%;
+        margin: 0 auto 30px;
+        text-align: center;
+    }
+}
+
+.access-link {
+    display: inline-block;
+    transition: all .3s ease 0s;
+    text-decoration: none;
+    color: $MainColor;
+  
+  &:hover {
+    cursor: pointer;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.54);
+  }
+}
+
+.card-image {
+    img {
+        width: 100%;
+        height: 230px;
+        @include sp {
+            height: auto;
+        }
+    }
+}
+
+.card-body {
+    padding: 16px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 2.0rem;
+    margin-top: 20px;
+}
+
+.card-text {
+    li {
+        margin-top: 20px;
+        @include sp {
+            text-align: center;
+        }
+    }
+}
+
+/* page-access.html end*/
+
+/* page-sidebar.html */
+.content {
+    display: flex;
+    @include sp {
+        flex-direction: column;
+    }
+}
+
+.content-main {
+    width: calc(100% - 320px);
+    margin-right: 50px;
+    @include sp {
+        width: 100%;
+        margin-right: 0px;
+    }
+}
+
+.content-side {
+    width: 200px;
+    text-align: center;
+    @include sp {
+        width: 80%;
+        margin: 30px auto 0;
+    }
+}
+
+.sidebar-title {
+    border-bottom: 1px solid $FooterColor;
+    font-weight: bold;
+    font-size: 2.8rem;
+}
+
+.side-box {
+    box-shadow: 0 5.85px 6.8px 0 rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    font-size: 2.0rem;
+
+}
+
+.sub_navi {
+        border-top: 1px solid $FooterColor;
+        margin-top: 15px;
+        font-size: 1.6rem;
+    li {
+        border-bottom: 1px solid $FooterColor;
+        padding: 5px 0;
+    }
+    a {
+        color: $TitleColor;
+    }
+}
+
+/* page-sidebar.html end*/
+
+/* パンくずリスト*/
+.bread_crumb {
+        display: flex;
+        margin-bottom: 20px;
+    
+    li {
+        font-size: 1.1rem;
+    }
+
+    
+    a {
+        text-decoration: none;
+        color: $MainColor;
+    }
+}
+
+.bread_crumb li:first-child::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f015';
+    font-weight: 900;
+    color: $MainColor;
+}
+
+.bread_crumb li::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f101';
+    font-weight: 900;
+    color: $MainColor;
+    padding:0 5px;
+}
+
+/* パンくずend */
+
+/* ページナビゲーション */
+.page_navi {
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;	
+    margin-top: 30px;
+}
+
+.page_navi li {
+    margin: 0 6.5px;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #d0d0d0;
+    position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    cursor: pointer;
+}
+
+.page_navi li a {
+    width: 36px;
+    height: 36px;
+    text-align: center;
+    position: relative;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    cursor: pointer;
+}
+
+.page_navi li.current {
+    color: #fff;
+    font-weight: bold;
+    padding: 3px 7px;
+    background: $TitleColor;
+    border: solid 1px $TitleColor;
+}
+
+.page_navi li:hover {
+	opacity: 0.8;
+}
+/* ページナビゲーション  end*/
+
+/* reservation カレンダー */
+.monthly-calendar caption {
+    font-size: 2.1rem !important; 
+    margin-bottom: 15px;
+    color: $TitleColor;
+}
+
+.monthly-prev {
+    font-size: 1.8rem;
+    margin-top: 5px;
+    color: $TitleColor;
+    
+}
+
+.monthly-next {
+    font-size: 1.8rem;
+    margin-top: 5px;
+    a {
+        color: $TitleColor;
+    }
+}
+
+
+//about page
+.is-style-dots {
+    margin: 15px 0;
+}
+
+.about-page_heading {
+    margin: 15px 0;
+    @include sp {
+        font-size: 1.6rem;
+    }
+}
+
+.about-page_text {
+    text-align: justify;
+    margin: 30px 0;
+    @include sp {
+        font-size: 1.3rem !important;
+    }
+}
+
+
+
+.wp-block-table.is-style-stripes {
+    border-spacing: 0;
+    border-collapse: inherit;
+    background-color: transparent;
+    border-bottom: 1px solid #f3f4f5;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.mymargin {
+    @include sp {
+    margin-top: 30px; 
+    }
+}
+
+//about-page end//
+
+//page-sidebar(コース料理）//
+.is-style-circle-mask {
+    @include sp {
+        width: 100%;
+    }
+}
+
+.wp-block-media-text {
+    width: 100%;
+}

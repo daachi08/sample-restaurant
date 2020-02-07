@@ -1,0 +1,113 @@
+@import "_color.scss";
+@import "_typography.scss";
+@import "_mixin.scss";
+@import "_responsive.scss";
+/*
+    footer
+*/
+.footer {
+    background-color:$FooterColor;
+}
+
+.footer-wrapper {
+    padding: 20px 12.3% 15px;
+    color: #c4c4c4;
+    background-color:$FooterColor;
+    @include sp {
+        padding: 24px;
+    }
+}
+
+.footer-contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-contents_left {
+    width: 300px;
+    margin: auto;
+    @include tab {
+        width: 200px;
+    }
+    @include sp {
+        display: none;
+    }
+    img {
+        width: 65%;
+        margin-top: 30px;
+    }
+}
+
+.footer-contents_right {
+    width: 65%;
+    border-left: 1px solid #D0D0D0;
+    @include sp {
+        width: 100%;
+        border: 1px solid #D0D0D0;
+    }
+}
+
+.footer-nav {
+    padding-left: 15%;
+    @include sp {
+        text-align: center;
+        padding-left: 0%;
+    }
+    ul {
+        margin-top: 30px;
+        @include sp {
+            margin-top: 20px;
+        }
+    }
+    li {
+        width: 50%;
+        margin-bottom: 20px;
+        color: #fff;
+        @include sp {
+            width: 100%;
+        }
+
+    }
+}
+
+#menu-item-133,#menu-item-134,#menu-item-135,#menu-item-136,#menu-item-137{
+    a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color:  $TitleColor;
+  
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: $TitleColor;
+    transition: all .3s ease 0s;
+  }
+}
+}
+#menu-item-133 a:hover::after,#menu-item-134 a:hover::after,
+#menu-item-135 a:hover::after,#menu-item-136 a:hover::after,
+#menu-item-137 a:hover::after
+ {
+    width: 100%;
+}
+
+.copy-right {
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    @include sp {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+/*
+    footer end
+*/

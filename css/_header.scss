@@ -1,0 +1,207 @@
+@import "_color.scss";
+@import "_typography.scss";
+@import "_mixin.scss";
+@import "_responsive.scss";
+/*
+    header
+*/
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+/* ドロワーメニュー*/
+.screen-menu{
+    height: 20px;
+    position: absolute;
+    right: 23px;
+    top: 33px;
+    width: 30px;
+    z-index: 99;
+    display: none;
+    @include sp {
+        display: block;
+    }
+}
+.menu__line{
+    background: rgb(171,52,36);
+    display: block;
+    height: 3px;
+    position: absolute;
+    transition:transform .3s;
+    width: 100%;
+}
+.menu__line--center{
+    top: 9px;
+}
+.menu__line--bottom{
+    bottom: -1px;
+}
+.menu__line--top.active{
+    top: 8px;
+    transform: rotate(45deg);
+}
+.menu__line--center.active{
+    transform:scaleX(0);
+}
+.menu__line--bottom.active{
+    bottom: 10px;
+    transform: rotate(135deg);
+}
+
+.gnav{
+    background: rgba(0,0,0,0.6);
+    display: none;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 98;
+}
+.gnav__wrap{
+    align-items:center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+.gnav__menu__item{
+    margin: 40px 0;
+}
+.gnav__menu__item a{
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 40px;
+    text-decoration: none;
+    transition: .5s;
+}
+.gnav__menu__item a:hover{
+    color: #666;
+}
+
+#menu-item-148,#menu-item-149,#menu-item-150,#menu-item-151,#menu-item-152,#menu-item-153{
+        padding: 10px;
+    
+}
+
+/* ドロワーメニュー*/
+
+
+.header-list_wrapper {
+    background: rgba(255,255,255,0.85);
+}
+
+.header-list {
+    display: flex;
+}
+
+.global-nav_left {
+    width: calc(50% - 115px);
+    @include tab {
+        width: calc(50% - 80px);
+    }
+
+    ul {
+        display: flex;
+        @include sp {
+            display: none;
+        }
+    }
+
+    li {
+        margin: 45px 0 0 auto;
+    }
+
+
+   a {
+    text-decoration: none;
+    color:  $TitleColor;
+   }
+}
+
+.nav-link {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color:  $TitleColor;
+  
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: $TitleColor;
+    transition: all .3s ease 0s;
+  }
+}
+  .nav-link:hover::after {
+    width: 100%;
+}
+
+#menu-item-139,#menu-item-127,#menu-item-128,#menu-item-138,#menu-item-141,#menu-item-140{
+    a {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color:  $TitleColor;
+  
+  &::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: $TitleColor;
+    transition: all .3s ease 0s;
+  }
+}
+}
+#menu-item-139 a:hover::after,#menu-item-127 a:hover::after,
+#menu-item-128 a:hover::after,#menu-item-138 a:hover::after,
+#menu-item-141 a:hover::after,#menu-item-140 a:hover::after
+ {
+    width: 100%;
+}
+
+.header-logo {
+    width: 100px;
+    margin:15px auto 15px auto;
+    @include sp {
+        width: 70px;
+    }
+}
+
+
+.global-nav_right {
+    width: calc(50% - 115px);
+    @include tab {
+        width: calc(50% - 80px);
+    }
+    ul {
+        display: flex;
+        @include sp {
+            display: none;
+        }
+    }
+
+    li {
+        margin: 45px auto 0 0;
+   }
+
+   a {
+    text-decoration: none;
+    color:  $TitleColor;
+    }
+
+}
+
+
+/*
+    header end
+*/

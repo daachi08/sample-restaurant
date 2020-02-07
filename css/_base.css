@@ -1,0 +1,282 @@
+@charset "UTF-8";
+/* ルートのフォントサイズを16pxに設定*/
+@media (max-width: 1180px) {
+  .aa {
+    color: red;
+  }
+}
+
+@media (max-width: 1179px) {
+  .aa {
+    color: blue;
+  }
+}
+
+@media (max-width: 767px) {
+  .aa {
+    color: yellow;
+  }
+}
+
+/*
+    リセットCSS等の基本設定
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* ルートのフォントサイズ*/
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  font-size: 1.6em;
+  font-weight: 500;
+  color: #3e3e3e;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6,
+a, p, span,
+blockquote, code,
+ol, ul, li, dl, dt, dd,
+div, section, article, main, aside,
+nav, header, footer,
+img, figure, figcaption,
+address, time, audio, video,
+iframe, fieldset,
+form, label, table, caption,
+tbody, tfoot, thead,
+tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article, aside, footer, header, nav, section, main {
+  display: block;
+}
+
+li, ol {
+  list-style: none;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid;
+}
+
+th, td {
+  padding: 4px 6px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #3e3e3e;
+}
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid #3e3e3e;
+  border-radius: 0;
+  background-image: none;
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-appearance: none;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border: 1px solid #3e3e3e;
+  box-shadow: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+  border: none;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+  outline: none;
+  border: none;
+}
+
+input[type="submit"] ::-moz-focus-inner {
+  padding: 0;
+  border: none;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + span {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 1.2em;
+  margin: 0 0.2em 0;
+  cursor: pointer;
+}
+
+input[type="radio"] + span::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #3e3e3e;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+
+input[type="radio"] + span::after {
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
+}
+
+input[type="radio"] + span:focus, input[type="radio"] + span:checked {
+  outline: none;
+  border: 1px solid #fff;
+  box-shadow: none;
+  background: #3e3e3e;
+}
+
+input[type="radio"]:checked + span::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0.2em;
+  transform: translateY(-50%);
+  background: #3e3e3e;
+  border-radius: 50%;
+  width: 0.6em;
+  height: 0.6em;
+  display: block;
+  opacity: 1;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + span {
+  display: inline-block;
+  position: relative;
+  padding: 0 0 0 1.2em;
+  margin: 0 0.2em 0;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+input[type="checkbox"] + span::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #3e3e3e;
+  border-radius: 2px;
+  width: 1em;
+  height: 1em;
+  display: block;
+}
+
+input[type="checkbox"] + span::after {
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
+}
+
+input[type="checkbox"]:checked + span::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(-45deg);
+  width: 1em;
+  height: 0.6em;
+  margin-top: -0.2em;
+  display: block;
+  border-left: 3px solid #3e3e3e;
+  border-bottom: 3px solid #3e3e3e;
+  opacity: 1;
+}
+
+select {
+  width: 100%;
+  padding: 8px 24px 8px 8px;
+  border-radius: 0;
+  background-image: none;
+  border: 1px solid #3e3e3e;
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:focus {
+  outline: none;
+  border: 1px solid #3e3e3e;
+  box-shadow: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1100px;
+}
+
+@media (max-width: 1179px) {
+  .inner {
+    padding: 0 10px;
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.br-sp {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .br-sp {
+    display: block;
+  }
+}

@@ -1,0 +1,17 @@
+@media (max-width: 1180px) {
+  .aa {
+    color: red;
+  }
+}
+
+@media (max-width: 1179px) {
+  .aa {
+    color: blue;
+  }
+}
+
+@media (max-width: 767px) {
+  .aa {
+    color: yellow;
+  }
+}
